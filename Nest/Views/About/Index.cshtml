@@ -1,0 +1,278 @@
+﻿@model AboutVM
+<div id="small">
+    <div class="info">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <a href="~/"><i class="fa-solid fa-house"></i>Home</a>
+                    <span>Pages</span>
+                    <span>About us</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="nest">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <img class="img1" src="@Model.About.Image" alt="">
+            </div>
+            <div class="col-lg-6 col-12">
+                <h2>@Model.About.Title</h2>
+                <p>
+                   @Model.About.Content
+                </p>
+                <p>
+                    Ius ferri velit sanctus cu, sed at soleat accusata. Dictas prompta et Ut placerat legendos
+                    interpre.Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante Etiam sit amet orci
+                    eget. Quis commodo odio aenean sed adipiscing. Turpis massa tincidunt dui ut ornare lectus.
+                    Auctor elit sed vulputate mi sit amet. Commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate id est laborum.
+                </p>
+                <div class="images">
+                    @foreach (AboutImage aboutImage in Model.About.AboutImages)
+                    {
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                        <img src="@aboutImage.Image" alt="">
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="provide">
+    <div class="provide-text">
+        <h2>What We Provide?</h2>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @foreach (Provider provider in Model.Providers)
+            {
+                <div class="col-lg-4 ">
+                    <div class="box">
+                        <img src="@provider.Image" alt="">
+                        <h4>@provider.Title</h4>
+                        <p>@provider.Content
+                        </p>
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<div id="partner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-12">
+                <img src="@Model.Performances.Image" alt="">
+            </div>
+            <div class="col-lg-5">
+                <h4>@Model.Performances.Title</h4>
+                <h1>Your Partner for e-commerce grocery solution</h1>
+                <p>
+                    @Model.Performances.Content
+                </p>
+                <p>
+                    Pitatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo <br> enim ipsam voluptatem
+                    quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="history">
+
+    <div class="container">
+        <div class="row align-items-center">
+            @foreach (History history in Model.Histories)
+            {
+                <div class="col-lg-4">
+                    <div class="box">
+                        <h3>@history.Title</h3>
+                        <p>
+                            @history.Content
+                        </p>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<div id="years">
+    <div class="overlay"></div>
+    <div class="all">
+        <div class="box">
+            <h1>0+</h1>
+            <h4>Glorious years</h4>
+        </div>
+        <div class="box">
+            <h1>1+</h1>
+            <h4>Happy clients</h4>
+        </div>
+        <div class="box">
+            <h1>3+</h1>
+            <h4>Projects complete</h4>
+        </div>
+        <div class="box">
+            <h1>1+</h1>
+            <h4>Team advisor</h4>
+        </div>
+        <div class="box">
+            <h1>1+</h1>
+            <h4>Products Sale</h4>
+        </div>
+    </div>
+</div>
+<div id="team">
+    <div class="team-text">
+        <h2>Our team</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <h6>@Model.TeamInfos.Title</h6>
+                <h1>Meet our Export Team </h1>
+                <p>
+                    @Model.TeamInfos.Content
+                </p>
+                <p>
+                    @Model.TeamInfos.Content
+                </p>
+                <button>
+                    View All members
+                </button>
+            </div>
+            @foreach (TeamMembers team in Model.TeamMembers)
+            {
+
+                <div class="col-lg-4 col-12 ceo">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/page/about-6.png" alt="">
+                    <div class="item">
+                        <h4>@team.FullName</h4>
+                        <span>@team.Position</span>
+                        <br>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+
+            }
+         
+
+        </div>
+    </div>
+</div>
+
+
+<div id="stayhome">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="stay_hi">
+                    <div class="text-home">
+                        <h2>
+                            Stay home & get your daily <br>
+                            needs from our shop
+                        </h2>
+                        <p>
+                            Start You'r Daily  Shopping with Nest Mart
+                        </p>
+                        <form action="">
+                            <i class="fa-solid fa fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Your email address">
+                            <button>Subscribe</button>
+
+                        </form>
+                    </div>
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-13.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div id="items">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Best prices & <br> offers</h3>
+                        <p>Orders $50 or more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Free Delivery</h3>
+                        <p>24/7 amazing services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Great Daily deal</h3>
+                        <p>When you sign up</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Wide assortment</h3>
+                        <p>Mega Discounts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-5.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Easy returns</h3>
+                        <p>
+                            Easy returns
+                            Within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section CSS{ 
+    <link href="~/CSS/about.css" rel="stylesheet" />
+}

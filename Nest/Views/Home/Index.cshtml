@@ -1,0 +1,449 @@
+﻿<div id="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="search-text text-center">
+                    <h2>What are you looking for?</h2>
+                    <form action="">
+                        <i class="fa-solid fa fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Your email address">
+                        <button>Subscribe</button>
+
+                    </form>
+                    <div class="cakes">
+                        <a href="">Cake</a><a href="">Coffes</a><a href="">Pet Foods</a><a href="">Vegetables</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div id="trending">
+    <h1>Trending items</h1>
+    <div class="container">
+        <div class="row">
+            @foreach (Home home in Model.Homes)
+            {
+                <div class="col-lg-3 col-12">
+                    <div data-id="1" class="box mb-4">
+                        <div class="top">
+                            <span>Hot</span>
+                            <a href="product.html">
+                                <img class="img1"
+                                     src="@home.Image"
+                                     alt="">
+                            </a>
+                            <a href="product.html">
+                                <img class="img2"
+                                     src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-2.jpg"
+                                     alt="">
+                            </a>
+                            <div class="buttons">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-shuffle"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="bottom">
+                            <span class="prod-cat">@home.Text</span>
+                            <h6 class="prod-name">@home.Title</h6>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <span>(4.0)</span>
+                            <p>By <a class="comp-name" href="">@home.Context</a></p>
+
+                            <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>$@home.Price</span>
+                                    <del>$55.8</del>
+                                </div>
+                                <button class="btnAdd">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+            
+</div>
+    </div>
+</div>
+
+<div id="deals">
+    <h1>Deals of the Day</h1>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (DealsHome dealshome in Model.DealsHomes)
+            {
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="col-lg-3 col-12">
+                    <div class="box1 col-12">
+                        <img src="@dealshome.Image" alt="">
+                        <div class="contents">
+                            <div class="counter d-flex justify-content-between">
+                                <span>1116 <p>Days</p></span>
+                                <span>10 <p>Hours</p></span>
+                                <span>49 <p>Mins</p></span>
+                                <span>15 <p>Sec</p></span>
+
+                            </div>
+                            <div class="deal-text">
+                                <h6 class="prod-name">@dealshome.Title</h6>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <span>(4.0)</span>
+                                <p>By <a class="comp-name" href="">Nestfood</a></p>
+
+                                <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span>$@dealshome.Price</span>
+                                        <del>$55.8</del>
+                                    </div>
+                                    <button>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+            @*<div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="col-lg-3 col-12">
+            <div class="box1 col-12">
+                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-6.png" alt="">
+                <div class="contents">
+                    <div class="counter d-flex justify-content-between">
+                        <span>1116 <p>Days</p></span>
+                        <span>10 <p>Hours</p></span>
+                        <span>49 <p>Mins</p></span>
+                        <span>15 <p>Sec</p></span>
+
+                    </div>
+                    <div class="deal-text">
+                        <h6 class="prod-name">Seeds of Change Organic <br> Quinoe Naturel</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <span>(4.0)</span>
+                        <p>By <a class="comp-name" href="">Nestfood</a></p>
+
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="col-lg-3 col-12">
+            <div class="box1">
+                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-7.png" alt="">
+                <div class="contents">
+                    <div class="counter d-flex justify-content-between">
+                        <span>1116 <p>Days</p></span>
+                        <span>10 <p>Hours</p></span>
+                        <span>49 <p>Mins</p></span>
+                        <span>15 <p>Sec</p></span>
+
+                    </div>
+                    <div class="deal-text">
+                        <h6 class="prod-name">Seeds of Change Organic <br> Quinoe Naturel</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <span>(4.0)</span>
+                        <p>By <a class="comp-name" href="">Nestfood</a></p>
+
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" class="col-lg-3 col-12">
+            <div class="box1">
+                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-8.png"
+                     alt="">
+                <div class="contents">
+                    <div class="counter d-flex justify-content-between">
+                        <span>1116 <p>Days</p></span>
+                        <span>10 <p>Hours</p></span>
+                        <span>49 <p>Mins</p></span>
+                        <span>15 <p>Sec</p></span>
+
+                    </div>
+                    <div class="deal-text">
+                        <h6 class="prod-name">Seeds of Change Organic <br> Quinoe Naturel</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <span>(4.0)</span>
+                        <p>By <a class="comp-name" href="">Nestfood</a></p>
+
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+        </div>
+    </div>
+</div>
+<br>
+<div id="selling">
+    <div class="container-fluid">
+        <div class="row">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="col-lg-3 col-12">
+                <h3>Top Selliing</h3>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-1.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-2.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-3.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="col-lg-3 col-12">
+                <h3>Trending Products</h3>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-4.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-5.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-6.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" class="col-lg-3 col-12">
+                <h3>Recently added</h3>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-7.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-8.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-9.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Nestle Original Coffee-Mate Coffee Creamer</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" class="col-lg-3 col-12">
+                <h3>Top Rated</h3>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-10.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-11.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2 d-flex">
+                    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/thumbnail-12.jpg" alt="">
+                    <div class="sell-text">
+                        <h6 class="prod-name">Organic Cage-Free Grade A Large Brown Eggs</h6>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                            <div>
+                                <span>$54.35</span>
+                                <del>$55.8</del>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

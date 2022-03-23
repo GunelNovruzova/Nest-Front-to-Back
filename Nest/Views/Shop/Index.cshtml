@@ -1,0 +1,228 @@
+﻿@model ShopVM
+  <div id="snack">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h1>Snack</h1>
+                <a class="first" href=""><i class="fa-solid fa-house"></i> Home</a>
+                <i class="fa-solid fa-angle-right sec"></i>
+                <a href="">Shop</a>
+                <i class="fa-solid fa-angle-right sec"></i>
+                <a href="">Snack</a>
+            </div>
+            <div class="col-lg-7">
+                <div class="right">
+                    <a class="fourth" class="fourth" href=""><i class="fa-solid fa-xmark third"></i> Cabbage</a>
+                    <a href=""><i class="fa-solid fa-xmark"></i> Broccoli</a>
+                    <a class="fourth" href=""><i class="fa-solid fa-xmark third"></i> Artichoke</a>
+                    <a class="fourth" href=""><i class="fa-solid fa-xmark third"></i> Celery</a>
+                    <a class="fourth" href=""><i class="fa-solid fa-xmark third"></i> Spinach</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="trending">
+    <h1>Trending items</h1>
+    <div class="container">
+        <div class="row">
+            @foreach (Shop shop in Model.Shops)
+            {
+                <div class="col-lg-3">
+                    <div data-id="1" class="box mb-4">
+                        <div class="top">
+                            <span>Hot</span>
+                            <a href="product.html"><img class="img1" src="@shop.Image" alt=""></a>
+                            <a href="product.html">
+                                <img class="img2"
+                                     src="http://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-2.jpg" alt="">
+                            </a>
+                            <div class="buttons">
+                                <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-shuffle"></i>
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="bottom">
+                            <span class="prod-cat">@shop.Text</span>
+                            <h6 class="prod-name">@shop.Title</h6>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <i class="fa-solid fa-star star"></i>
+                            <span>(4.0)</span>
+                            <p>By <a class="comp-name" href="">@shop.Context</a></p>
+
+                            <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>@shop.Price</span>
+                                    <del>$55.8</del>
+                                </div>
+                                <button class="btnAdd">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</div>
+<br>
+<div id="pag">
+    <div class="all d-flex">
+        <span><i class="fa-solid fa-arrow-left"></i></span>
+        <span>1</span>
+        <span class="second">2</span>
+        <span>3</span>
+        <span>...</span>
+        <span>6</span>
+        <span><i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+</div>
+<div id="deals">
+    <h1>Deals of the Day</h1>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (Deals deals in Model.Deals)
+            {
+                <div class="col-lg-3">
+                    <div class="box1">
+                        <img src="@deals.Image" alt="">
+                        <div class="contents">
+                            <div class="counter d-flex justify-content-between">
+                                <span>1116 <p>Days</p></span>
+                                <span>10 <p>Hours</p></span>
+                                <span>49 <p>Mins</p></span>
+                                <span>15 <p>Sec</p></span>
+
+                            </div>
+                            <div class="deal-text">
+                                <h6 class="prod-name">@deals.Title</h6>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <i class="fa-solid fa-star star"></i>
+                                <span>(4.0)</span>
+
+
+                                <div class="price-box pb-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <span>@deals.Price</span>
+                                        <del>$55.8</del>
+                                    </div>
+                                    <button>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+
+
+        </div>
+    </div>
+</div>
+<br>
+<div id="stayhome">
+    <div class="text-home">
+        <h2>
+            Stay home & get your daily <br>
+            needs from our shop
+        </h2>
+        <p>
+            Start You'r Daily  Shopping with Nest Mart
+        </p>
+        <form action="">
+            <i class="fa-solid fa fa-magnifying-glass"></i>
+            <input type="text" placeholder="Your email address">
+            <button>Subscribe</button>
+
+        </form>
+    </div>
+    <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/banner/banner-9.png" alt="">
+</div>
+
+<div id="items">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-1.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Best prices & <br> offers</h3>
+                        <p>Orders $50 or more</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-2.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Free Delivery</h3>
+                        <p>24/7 amazing services</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-3.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Great Daily deal</h3>
+                        <p>When you sign up</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-4.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Wide assortment</h3>
+                        <p>Mega Discounts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-wrapper">
+                <div class="box">
+                    <div class="left-icon">
+                        <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-5.svg" alt="">
+                    </div>
+                    <div class="icon-text">
+                        <h3>Easy returns</h3>
+                        <p>
+                            Easy returns
+                            Within 30 days
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section CSS{
+    <link href="~/CSS/shop.css" rel="stylesheet" />
+}

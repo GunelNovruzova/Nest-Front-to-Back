@@ -1,0 +1,749 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="~/CSS/style.css">
+    <link rel="stylesheet" href="~/CSS/resposive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    @RenderSection("CSS",false)
+
+</head>
+
+<body style="overflow-x: hidden;">
+    <header>
+        <div class="top align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="~/">About Us</a>
+                        <a href="~/">My Account</a>
+                        <a href="~/">Wishlist</a>
+                        <a href="~/">Order Tracking</a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="news">
+                            <div>Trendy 25silver jewelry, save up 35% off today</div>
+                            <div>100% Secure delivery without contacting the courier</div>
+                            <div>Super Value Deals - Save more with coupons</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <p>Need Help?Call us: <span>+1800 900</span></p>
+
+                        <div class="dropdown">
+                            <a href="~/">English<i class="fa-solid fa-circle-chevron-down ms-1"></i></a><a href="~/"></a>
+                            <div class="content">
+                                <span>
+                                    <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-fr.png"
+                                         alt="">Français
+                                </span>
+                                <br>
+                                <span>
+                                    <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-dt.png"
+                                         alt="">Deutsch
+                                </span>
+                                <br>
+                                <span>
+                                    <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-ru.png"
+                                         alt="">Pусский
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="dropdown1">
+                            <a href="~/">USD<i class="fa-solid fa-circle-chevron-down ms-1"></i></a>
+                            <div class="content1">
+                                <span>
+                                    INR<img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-fr.png"
+                                            alt="">
+                                </span>
+                                <br>
+                                <span>
+                                    MBP<img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-dt.png"
+                                            alt="">
+                                </span>
+                                <br>
+                                <span>
+                                    EU<img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/flag-ru.png"
+                                           alt="">
+                                </span>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <a class="imgaa" href="~/index.html">
+                            <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/logo.svg" alt="">
+                        </a>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="form" action="">
+                            <select class="form-select" name="" id="">
+                                <option value="">All categories</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <input class="form-input" type="text" placeholder="Search for items...     ">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </form>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <a href="~/"><i class="fa-solid fa-rotate"> <sup id="pro">0</sup></i>Compare</a>
+                        <a href="~/"><i class="fa-solid fa-heart"><sup id="pro">6</sup></i>Wishlist</a>
+                        <a asp-controller="Cart">
+                            <i class="fa-solid fa-cart-shopping">
+                                <sup id="productcount">0</sup>
+                            </i>Cart
+                        </a>
+
+                        <a class="account" href="~/"><i class="fa-solid fa-user"></i>Account</a>
+                        <div class="accountdropdown">
+                            <div class="accountdrops">
+                                <i class="fa-solid fa-user"></i>
+                                <p>My Account</p>
+                            </div>
+                            <div class="accountdrops">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Order Tracking</p>
+                            </div>
+                            <div class="accountdrops">
+                                <i class="fa-solid fa-house"></i>
+                                <p>My Voucher</p>
+                            </div>
+                            <div class="accountdrops">
+                                <i class="fa-solid fa-heart"></i>
+                                <p>My Wishlist</p>
+                            </div>
+                            <div class="accountdrops">
+                                <i class="fa-solid fa-sliders"></i>
+                                <p>Settings</p>
+                            </div>
+                            <div class="accountdrops signout">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <p>Sign Out</p>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- <div class="content2">
+                           <a href="~/">My Account</a>
+                           <a href="~/">Order Tracking</a>
+                           <a href="~/">My Voucher</a>
+                           <a href="~/">My Wishlist</a>
+                           <a href="~/">Setting</a>
+                           <a href="~/">Sign Out</a>
+
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="phone-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <i id="open-nav" class="fas fa-bars"></i>
+                </div>
+                <div class="col-6 text-center">
+                    <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/logo.svg" alt="">
+                </div>
+                <div class="col-4 text-end">
+                    <i class="fa-solid fa-heart"><sup id="pro">6</sup></i>
+                    <i class="fa-solid fa-cart-shopping"><sup id="pro">2</sup></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <div class="nav-bar-inner">
+            <div class="box1">
+                <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/logo.svg" alt="">
+                <i id="close-nav" class="fa-solid fa-square-xmark close"></i>
+            </div>
+            <hr>
+            <input type="text" placeholder="Search for items...">
+
+            <div class="box">
+                <a href="~/">Home</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Shop</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Vendors</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Mega Menu</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Blog</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Pages</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="box d-flex">
+                <a href="~/">Language</a>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="inputs">
+                <a href="~/"><i class="fa-solid fa-location-pin"></i>Our location</a>
+                <a href="~/"><i class="fa-solid fa-user"></i>Log in /Sign Up</a>
+                <a href="~/"><i class="fa-solid fa-headphones"></i>(+01) - 2345 - 6789 </a>
+            </div>
+            <div class="text">
+                <h6>Follow us</h6>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <p>Copyright 2021 © Nest. All rights reserved. Powered by AliThemes.</p>
+        </div>
+
+    </div>
+
+
+    <div class="trends">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 trendscollg2">
+                    <div class="trend">Trending categories <i class="fas fa-angel down"></i></div>
+                </div>
+                <div class="col-lg-8 dropdownss">
+                    <div>
+                        Hot Deals
+                    </div>
+                    <div class="dropdownhomes">
+                        Home
+                        <i class="fa-solid fa-angle-down dropdownsi"></i>
+
+                        <div class="dropdownhome">
+                            <div class="homedrops">
+                                <p>Home 1</p>
+                            </div>
+                            <div class="homedrops">
+                                <p>Home 2</p>
+                            </div>
+                            <div class="homedrops">
+                                <p>Home 3</p>
+                            </div>
+                            <div class="homedrops">
+                                <p>Home 4</p>
+                            </div>
+                            <div class="homedrops">
+                                <p>Home 5</p>
+                            </div>
+                            <div class="homedrops">
+                                <p><a class="wide" href="~/index.html">Home 6</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                        <a asp-controller="About" asp-action="Index">About</a>
+                    </div>
+                    <div>
+                        <div class="dropdownshops">
+                            Shop
+                            <i class="fa-solid fa-angle-down dropdownsi"></i>
+                            <div class="dropdownshop">
+                                <div class="shopdrops">
+                                    <p>Shop Grid -Right Sidebar</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop Grid-Left Sidebar</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop List-Right Sidebar</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop List-Left Sidebar</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p><a asp-controller="Shop">Shop Wide</a></p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Single Product</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop-Filter</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop-Wishlist</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop-Cart</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop-Checkout</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop-Compare</p>
+                                </div>
+                                <div class="shopdrops">
+                                    <p>Shop Invoice</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdownsvendors">
+                        Vendors
+                        <i class="fa-solid fa-angle-down dropdownsi"></i>
+                        <div class="dropdownvendors">
+                            <div class="vendordrops">
+                                <p>Vendors Grid</p>
+                            </div>
+                            <div class="vendordrops">
+                                <p>Vendors List</p>
+                            </div>
+                            <div class="vendordrops">
+                                <p>Vendor Details 01</p>
+                            </div>
+                            <div class="vendordrops">
+                                <p>Vendor Details 02</p>
+                            </div>
+                            <div class="vendordrops">
+                                <p>Vendor Dashboard</p>
+                            </div>
+                            <div class="vendordrops">
+                                <p>Vendor Guide</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="megamenu">
+                            Mega Menu
+                            <i class="fa-solid fa-angle-down dropdownsi"></i>
+                            <div class="megamenudropdown">
+                                <div class="megamenudrop1">
+                                    <div class="maindrop">Fruit & Vegetables</div>
+                                    <div class="megamenudrops">Meat & Poultry</div>
+                                    <div class="megamenudrops">Fresh Vegetables</div>
+                                    <div class="megamenudrops">Herbs & Seasonings</div>
+                                    <div class="megamenudrops">Cuts & Sprouts</div>
+                                    <div class="megamenudrops">Exotic Fruits & Veggies</div>
+                                    <div class="megamenudrops">Packaged Produce</div>
+                                </div>
+                                <div class="megamenudrop2">
+                                    <div class="maindrop">Breakfast & Dairy</div>
+                                    <div class="megamenudrops">Milk & Flavoured Milk</div>
+                                    <div class="megamenudrops">Butter and Margarine</div>
+                                    <div class="megamenudrops">Eggs Substitutes</div>
+                                    <div class="megamenudrops">Marmalades</div>
+                                    <div class="megamenudrops">Sour Cream</div>
+                                    <div class="megamenudrops">Cheese</div>
+
+                                </div>
+                                <div class="megamenudrop3">
+                                    <div class="maindrop">Meat & Seafood</div>
+                                    <div class="megamenudrops">Breakfast Sausage</div>
+                                    <div class="megamenudrops">Dinner Sausage</div>
+                                    <div class="megamenudrops">Chicken</div>
+                                    <div class="megamenudrops">Sliced Deli Meat</div>
+                                    <div class="megamenudrops">Wild Caught Fillets</div>
+                                    <div class="megamenudrops">Crab and Shellfish</div>
+
+                                </div>
+
+                                <div class="megamenudropimg">
+                                    <h4>HOT DEALS</h4>
+                                    <h3>Don't miss <br> Trending</h3>
+                                    <h2>Save to 50%</h2>
+                                    <button>Shop now</button>
+                                    <div class="off25">
+                                        <h1>25% <br> off</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dropdownsblogs">
+                        Blog
+                        <i class="fa-solid fa-angle-down dropdownsi"></i>
+                        <div class="dropdownblogs">
+                            <div class="blogdrops">
+                                <p>Blog Category Grid</p>
+                            </div>
+                            <div class="blogdrops">
+                                <p>Blog Category List</p>
+                            </div>
+                            <div class="blogdrops">
+                                <p>Blog Category Big</p>
+                            </div>
+                            <div class="blogdrops">
+                                <p>Blog Category Wide</p>
+                            </div>
+                            <div class="blogdrops">
+                                <p>Single Post</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdownspages">
+                        Pages
+                        <i class="fa-solid fa-angle-down dropdownsi"></i>
+                        <div class="dropdownpages">
+                            <div class="pagedrops">
+                                <p>About Us</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Contact</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>My account</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Login</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Register</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Purchase Guide</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Privacy Policy</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>Terms of Service</p>
+                            </div>
+                            <div class="pagedrops">
+                                <p>404 Pages</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a asp-controller="Contact" asp-action="Index">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 callcenter">
+                    <div class="all">
+                        <div class="callcenterimg">
+
+                            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-headphone.svg"
+                                 alt="">
+                        </div>
+                        <div class="numbers">
+                            <p class="bignumbers">1900-888</p>
+                            <span>24/7Support Center</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <!-- Left -->
+            <!-- Right -->
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container-fluid text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <div  class=" col-lg-2 col-6">
+                        <!-- Links -->
+                        <img class="first" src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/logo.svg"
+                             alt="">
+
+                        <p>Awesome grocery store website template</p>
+                        <p>
+                            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-location.svg"
+                                 alt=""> <strong class="lol">Address:</strong> 5171 W Campbell Ave undefined
+                            Kent, Utah 53127 United States
+                        </p>
+                        <p>
+                            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-contact.svg"
+                                 alt=""> <strong class="lol">Call Us</strong> (+91)-540-025-124
+                        </p>
+                        <p>
+                            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-email-2.svg"
+                                 alt="">
+                            <strong class="lol">Email:</strong>
+                            sale@Nest.com
+                        </p>
+
+                        <p>
+                            <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/icon-clock.svg"
+                                 alt=""><strong class="lol">Hours:</strong>10:00-18:00, Mon-Sat
+                        </p>
+                        <!-- <h4> <strong>Install App</strong></h4>
+                        <p>From App Store or Google Play</p>
+                        <div class="images d-flex">
+                            <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/app-store.jpg" alt="" width="30%">
+                        <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/google-play.jpg" alt="" width="30%">
+                        </div>
+                        <p class="secure">Secured Payment Gateways</p>
+                        <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/payment-method.png" alt=""> -->
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div  class=" col-lg-2 col-6  ">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            Company
+                        </h4>
+                        <p>
+                            <a href="~/#!" class="text-reset">About us</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Delivery Information</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Contact Us</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Privacy & Policy</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Terms and Conditions</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Support Center</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Careers</a>
+                        </p>
+                    </div>
+                    <div  class=" col-lg-2  col-6">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            Account
+                        </h4>
+                        <p>
+                            <a href="~/#!" class="text-reset">Sign in</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">View Cart</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Mywhislist</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Track My Order</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Help Ticket</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Shipping Details</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Compare products</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div  class=" col-lg-2 col-6">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            Corporate
+                        </h4>
+                        <p>
+                            <a href="~/#!" class="text-reset">Become a Vendor</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Affiliate Program</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Farm Bussiness</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Farm Careers</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Our Suppliers</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Accessibility</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Promotions</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div  class="col-lg-2 col-6">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            Popular
+                        </h4>
+                        <p>
+                            <a href="~/#!" class="text-reset">Milk & Flavoured Milk</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Butter and Margarine</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Eggs Subsituites</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Marmalades</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Sour Cream and Dips</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Tea & Kombuchka</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">Cheese</a>
+                        </p>
+                    </div>
+                    <div  class="col-lg-2 col-6">
+                        <!-- Links -->
+                        <h4 class="text-uppercase fw-bold mb-4">
+                            <strong>Install App</strong>
+                        </h4>
+                        <p>
+                            <a href="~/#!" class="text-reset">From App Store or Google Play</a>
+                        </p>
+
+                        <div class="app-store row">
+                            <img style="width: 100px !important;"
+                                 src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/app-store.jpg" alt="">
+                            <img style="width: 100px !important;"
+                                 src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/google-play.jpg" alt="">
+                        </div>
+
+
+
+
+
+
+                        <p>
+                            <a href="~/#!" class="text-reset">Secured Payment Gateways</a>
+                        </p>
+                        <p>
+                            <a href="~/#!" class="text-reset">
+                                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/payment-method.png"
+                                     alt="">
+                            </a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+
+        </section>
+        <hr>
+        <div class="bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <p>
+                            © 2021, Nest - HTML Ecommerce Template <br>
+                            All rights reserved
+                        </p>
+                    </div>
+                    <div class="col-lg-4 d-flex duh">
+                        <div class="all d-flex">
+                            <div class="callcenterimg">
+
+                                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg"
+                                     alt="">
+                            </div>
+                            <div class="numbers">
+                                <p class="bignumbers">1900-6666</p>
+                                <span>Working 8.00 -22.00</span>
+                            </div>
+                            <div class="callcenterimg">
+
+                                <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg"
+                                     alt="">
+                            </div>
+                            <div class="numbers">
+                                <p class="bignumbers">1900-8888</p>
+                                <span>Working 8.00 -22.00</span>
+                            </div>
+                        </div>
+
+                        <!-- <img src="http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg" alt="">
+                        <p class="work">1900-6666 <br> <span>Working 8.00 -22.00</span> </p>
+                        <img src="~/http://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/phone-call.svg" alt="">
+                        <p class="work"> 1900-8888 <br> <span> Working 8.00 -22.00</span></p> -->
+                    </div>
+                    <div class="col-lg-4 text-end">
+                        <div class="follow d-flex">
+                            <h6>Follow us</h6>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-pinterest"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <p class="disc">Up to 15% discount on your first subscribe</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="~/JS/main.js"></script>
+    <script src="~/JS/side-bar.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+
+
+
+
+</html>
